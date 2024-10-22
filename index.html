@@ -1,0 +1,142 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="src/index.js"></script>
+</head>
+<body>
+  <div id="banner" class="banner">
+            <a href="index.html" class="name">phreddit</a>
+            <input type="text" id="searchbox" class="searchbox" placeholder="Search Phreddit...">
+            <button id="create-post" class="postbutton">Create Post</button>
+  </div>
+  <div class="container">
+    <div class="nav">
+      <nav class="navbar">
+        <div id="home-page" class="home">Home</div>
+        <hr class="delimiliter">
+        <h2 class="community-title">Communities</h2>
+        <button id="community-button">Create Community</button>
+        <ul class="community-list">
+             <!-- List items will be dynamically added -->
+        </ul>
+      </nav>
+    </div>
+    
+    
+    <div id="main" class="main">
+
+      <!-- Post View Page Structure -->
+      <div id="post-page" class="hidden">
+        <h2 id="post-page-title"></h2>
+        <p id="post-community-name"></p> <!-- Hold community name and timestamp -->
+        <p id="post-details"></p> <!-- username of the post creator and, if applicable the link flair -->
+        <p id="post-content"></p>
+        
+        <p id="post-meta">
+          Views: <span id="view-count"></span> | Comments: <span id="comment-count"></span>
+        </p>
+        <button id="add-comment">Add a comment</button>
+        <hr>
+
+        <div id="comment-section">
+          <h3>Comments</h3>
+          <div id="comments-list">
+            <!-- comments -->
+          </div>
+        </div>
+      </div>
+      
+      <div id = "community-page-view"></div>
+      <div id="post-controls">
+        <h2 id="post-header">All Posts</h2>
+        <div id="sort-options">
+          <button id="sort-newest">Newest</button>
+          <button id="sort-oldest">Oldest</button>
+          <button id="sort-active">Active</button>
+        </div>
+        <p id="post-count"></p>
+        <hr> <!-- thin black line separting header section with the post listed below -->
+        <div id="post-list"></div>
+      </div>
+
+      <!--the code below is New Commnuity form in main content area. it's hidden util the create community bottom is clicked-->
+      <div id="new-community-form" class="hidden">
+        <h2>Create a New Community</h2>
+        <label for="community-name">Community Name: </label>
+        <input type="text" id="community-name" maxlength="100" required>
+        <div id="community-name-error" class="error-message">The name should not be more than 100 characters and should not be empty.</div>
+
+        <label for="community-description">Community Description: </label>
+        <textarea id="community-description" maxlength="500" required></textarea>
+        <div id="community-description-error" class="error-message">The description should not be more than 500 characters in length and should not be empty.</div>
+
+        <label for="username">Creator Username: </label>
+        <input type="text" id="username" required>
+        <div id="username-error" class="error-message">The username box should not be empty.</div>
+
+        <button class="community-button" id="engender-community">Engender Community</button>
+      </div>
+
+      <div id="new-comment-page" class="hidden">
+        <!-- content will be dynamically added here -->
+      </div>
+
+      <!-- Creat New Post-->
+       <div id="new-post-form" class="hidden">
+          <h2>Create New Post</h2>
+
+          <!--drop down menu for available communities
+              Must select a community to which the post will belong
+          -->
+          <label for="community-selection">Select Community: </label>
+          <select id="community-selection">
+            <option value="">Select a community</option>
+            <!-- dynamiclly add community options here -->
+          </select>
+          <div id="community-error" class="error-message">Please select a community.</div>
+
+          <!-- post title, required (limited to 100 characters)-->
+          <label for="post-title">Post Title: </label>
+          <input type="text" id="post-title" maxlength="100" required>
+          <div id="post-title-error" class="error-message">Title is required and should not exceed 100 characters.</div>
+
+          <br>
+          <!-- Link flair selection (optional): 
+                drop-down menu of currently avaiable link flairs.
+                user may select this
+                Or
+                A text entry box for user to enter a new link flair
+                limited to 30 characters-->
+          <label for="flair-selection">Select Link Flair (Optional): </label>
+          <select id="flair-selection">
+            <option value="">None</option>
+            <!--
+            <option value="flair...">Option</option>
+            -->
+          </select>
+          <br>
+          <label for="new-flair">Or, add a new Link Flair (Optional): </label>
+          <input type="text" id="new-flair" maxlength="30">
+          <div id="flair-error" class="error-message">Flair cannot exceed 30 characters.</div>
+
+          <br>
+          <!-- post content, required -->
+          <label for="new-post-content">Post Content: </label>
+          <textarea id="new-post-content" required></textarea>
+          <div id="post-content-error" class="error-message">Content is required.</div>
+
+          <!-- username for post, required -->
+          <label for="post-username">Your Username: </label>
+          <input type="text" id="post-username" required>
+          <div id="post-username-error" class="error-message">Username is required.</div>
+
+          <button id="submit-post" class="postbutton">Submit Post</button>
+       </div>
+
+
+  </div>
+  </div>
+
+
+</body>
+</html>

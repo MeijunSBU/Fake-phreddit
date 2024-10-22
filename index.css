@@ -1,0 +1,549 @@
+/* Add CSS stylesheet */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Times New Roman, Times, serif;
+} */
+
+html,body 
+{
+    height: 100%;
+    margin: 0;
+    padding:0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*header*/
+.banner { /* These are just the default CSS properties for h1 header tags */
+    /* display: block; */
+    font-size: 230%;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    box-shadow: 0 4px 2px -4px gray;/*delimiter*/
+    border-bottom: 1px solid black; /*border color*/
+}
+.name{
+    font-size: 80%;
+    color: #FF4500;
+}
+.searchbox{
+    width: 70%;
+    padding: 1.5%;
+    border-radius: 25px; /* Rounded corners for oval shape */
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.postbutton{
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 1% 3%;
+    font-size: 40%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1%;
+}
+.postbutton:hover {
+    background-color: #FF4500; /* Change to reddish-orange when hovered or focused */
+}
+
+/* Container for the nac and main section*/
+.container
+{
+    display: flex;
+    height: calc(100vh - 60px);
+}
+.nav {
+    width: 25%; /* Set navbar width to 25% of the viewport width */
+}
+.navbar {
+    height: 100vh; /* Set to full viewport height */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Arrange elements vertically */
+    background-color: white;
+    padding: 10px;
+    border-right: 1px solid #ccc; /* Vertical delimiter */
+    box-sizing: border-box;
+}
+
+.home {
+    color: black;
+    text-align: center;
+    background-color: lightgray;
+    padding: 5% 5%; /* Increased padding for a larger button */
+    border-radius: 5%;
+    transition: background-color 0.3s ease;
+    margin: 2%; /* Increased space below the Home link */
+    display: block; /* Block display */
+    font-size: 1.5em; /* Increased font size for visibility */
+}
+
+
+.delimiliter {
+    border: 0; /* Remove the default border */
+    height: 1px; /* Set the thickness of the line */
+    background-color:rgba(128, 128, 128, 0.293);
+    margin: 3% 0; /* Optional: Add margin above and below */
+}
+
+.home:hover {
+    background-color: #FF4500; /* phreddit reddish-orange */
+    color: white; /*change text to white as background color is changed*/
+}
+
+.community-title {
+    margin: 1% 0; /* Space above and below the  */
+    font-size: 150%;
+}
+
+#community-button {
+    background-color: gray;
+    color: white;
+    padding: 5% 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Space below the button */
+    margin-right: 10px;
+}
+
+#community-button:hover {
+    background-color: #FF4500; /* phreddit reddish-orange */
+}
+
+.community-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.community-list li {
+    margin: 5px 0; /* Space between community links */
+}
+/*save for community link class after the implemnetation of community page and JS*/
+.community-link {
+    color: black;
+    text-decoration: none;
+}
+
+.community-link:hover {
+   text-decoration: underline; /* Optional hover effect */
+}
+
+/* Center the form container and apply Reddit color scheme */
+#new-community-form {
+    display: none; /* Hidden by default */
+    padding: 30px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    width: 500px; /* Form width */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-sizing: border-box;
+    
+    /* Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Form Heading */
+#new-community-form h2 {
+    font-size: 1.8em; /* Larger font size for the heading */
+    color: #FF4500; /* Reddit orange */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Reddit-like font */
+}
+
+/* Labels */
+#new-community-form label {
+    font-size: 1.1em; /* Larger label font */
+    color: #333; /* Dark gray text */
+    display: block;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+/* Input Fields */
+#new-community-form input[type="text"],
+#new-community-form textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded */
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: none; /* Initially hidden */
+}
+
+/* Submit Button */
+#engender-community {
+    background-color: #FF4500; /* Reddit orange */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    width: 100%; /* Full width */
+}
+
+#engender-community:hover {
+    background-color: #e04b00; /* Slightly darker orange on hover */
+}
+
+
+
+
+/* Styling for main contents */
+.main 
+{
+    flex-grow: 1;
+    overflow-y: auto; /* add scroll bar only to the main content section*/
+    padding: 20px;
+    height: calc(100vh - 60px);
+}
+
+/* Styling for posts list*/
+#post-controls
+{
+    margin: 5px 10;
+}
+
+#sort-options
+{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+#sort-options button
+{
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    border: none;
+}
+
+#sort-options button:hover
+{
+    background-color: #FF4500;
+}
+
+#post-list
+{
+    margin-top: 10px;
+}
+
+.post-item
+{
+    cursor: pointer;
+    border-bottom: 1px dotted black; /* add border to the bottom of each post */
+    padding: 10px 0; /* add vertical padding above and below the content of each post */
+}
+
+.post-item:hover 
+{
+    background-color: #f9f9f9; /* when hover the background color slightly changes*/
+}
+
+.post-item h3
+{
+    margin: 0; /* remove default margin for h3 */
+}
+
+.flair {
+    font-size: 0.9em;
+    color: #FF4500;
+    margin: 5px 0; /* add some space around the flair to separate it from title and the content beneath it*/
+}
+
+.post-details
+{
+    font-size: 0.8em;
+    color: #555;
+}
+/* hidden class set to display none as default */
+.hidden {
+    display: none; /* Hide elements with this class */
+}
+  
+.error-message {
+    color: red; /* Style for error messages */
+    font-size: 0.9em; /* Smaller font for error messages */
+  }
+  
+/* Center the post form and apply Reddit color scheme */
+#new-post-form {
+    display: none; /* Hidden by default */
+    padding: 5%;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    width: 75%; /* Form width */
+    box-shadow: 0px 4px 12px #0000001a; /* Soft shadow */
+    box-sizing: border-box;
+    
+    /* Centering */
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Form Heading */
+#new-post-form h2 {
+    font-size: 1.8em; /* Larger font size for the heading */
+    color: #FF4500; /* Reddit orange */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Reddit-like font */
+}
+
+/* Labels */
+#new-post-form label {
+    font-size: 1.1em; /* Larger label font */
+    color: #333; /* Dark gray text */
+    display: block;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+/* Input Fields and Select Dropdown */
+#new-post-form input[type="text"],
+#new-post-form select,
+#new-post-form textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded */
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: none; /* Initially hidden */
+}
+
+/* Submit Button */
+#submit-post {
+    background-color: #FF4500; /* Reddit orange */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    width: 100%; /* Full width */
+}
+
+#submit-post:hover {
+    background-color: #e04b00; /* Slightly darker orange on hover */
+}
+
+/* Drop-down Menu Styling */
+#community-selection, #flair-selection {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Optional Fields (Link Flair) */
+#new-post-form .optional {
+    font-size: 0.9em; /* Smaller font for optional fields */
+    color: #777; /* Lighter gray to indicate optional */
+}
+
+/* Textarea (Post Content) */
+#post-content {
+    height: 150px; /* Larger area for post content */
+    resize: vertical; /* Allow resizing vertically */
+}
+
+/*comments*/
+/* Comment Section Container */
+#comment-section {
+    margin-top: 20px;
+  }
+  
+  #comment-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Comments List */
+  #comments-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Individual Comment Block */
+  .comment {
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  
+  /* Comment Content Area */
+  .comment-content {
+    border-left: 2px solid #ccc;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+  
+  /* Comment Metadata (Author and Timestamp) */
+  .comment-meta {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .comment-meta strong {
+    color: #333;
+  }
+  
+  /* Comment Text */
+  .comment-text {
+    font-size: 16px;
+    margin: 5px 0 10px 0;
+    color: #000;
+  }
+  
+  /* Reply Button */
+  .reply-button {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reply-button:hover {
+    background-color:  #CC3700;
+  }
+  
+  /* Nested Comments Indentation (dynamic via JS) */
+  .comment-content {
+    margin-left: 0; /* Dynamically adjusted by JS */
+  }
+/*new comment form*/
+/* General Styles for Comment Page */
+#new-comment-page {
+    max-width: 90%; /* Use a percentage for max-width */
+    width: 500px; /* Set a base width for larger screens */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 2% 3%; /* Use relative units for padding */
+    border: 1px solid #ccc; /* Light border around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center; /* Center align the heading */
+    color: #333; /* Dark text color */
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 1.8rem; /* Responsive font size */
+}
+
+/* Form Styles */
+#comment-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Label Styles */
+label {
+    margin-bottom: 0.5rem; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Darker label color */
+    font-size: 1rem; /* Responsive font size */
+}
+
+/* Textarea Styles */
+#comment-content {
+    resize: none; /* Prevent resizing the textarea */
+    height: 100px; /* Fixed height */
+    padding: 1rem; /* Use relative padding */
+    border: 1px solid #ccc; /* Border for textarea */
+    border-radius: 4px; /* Rounded corners */
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 1rem; /* Responsive font size */
+    transition: border-color 0.3s; /* Transition for border color */
+    width: 100%; /* Full width */
+}
+
+/* Textarea Focus Effect */
+#comment-content:focus {
+    border-color: #FF4500;/* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Input Styles */
+#comment-username {
+    padding: 1rem; /* Use relative padding */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 4px; /* Rounded corners */
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 1rem; /* Responsive font size */
+    transition: border-color 0.3s; /* Transition for border color */
+    width: 100%; /* Full width */
+}
+
+/* Input Focus Effect */
+#comment-username:focus {
+    border-color: #FF4500; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+/* Button Styles */
+button {
+    margin-top: 1rem; /* Space above buttons */
+    padding: 0.8rem 1.5rem; /* Use relative padding */
+    background-color: #FF4500;/* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 1rem; /* Responsive font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.1s; /* Transition for hover effect */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #CC3700; /* Darker blue on hover */
+}
+
+/* Button Active Effect */
+button:active {
+    transform: scale(0.95); /* Slightly scale down on click */
+}
